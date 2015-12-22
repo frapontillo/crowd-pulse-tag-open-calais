@@ -55,6 +55,10 @@ public class OpenCalaisTagger extends IPlugin<Message, Message, VoidConfig> {
         return PLUGIN_NAME;
     }
 
+    @Override public IPlugin<Message, Message, VoidConfig> getInstance() {
+        return new OpenCalaisTagger();
+    }
+
     @Override public VoidConfig getNewParameter() {
         return new VoidConfig();
     }
